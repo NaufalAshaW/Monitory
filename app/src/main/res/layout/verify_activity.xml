@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white3"
+    tools:context=".VerifyActivity">
+
+    <LinearLayout
+        android:id="@+id/actArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:elevation="20dp"
+        android:paddingVertical="20dp"
+        android:paddingHorizontal="24dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_lg"
+            style="@style/Theme.Monitory.TextBase"
+            android:textColor="@color/gunmetal"
+            android:gravity="center_horizontal"
+            android:text="@string/verif_no_kk"/>
+        <android.widget.Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_secondary"
+            android:theme="@style/Theme.AppCompat.Light"
+            style="@style/Theme.Monitory.Button"
+            android:text="@string/verif_buy_kk"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingHorizontal="@dimen/margin_container"
+        app:layout_constraintBottom_toTopOf="@+id/actArea"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            style="@style/Theme.Monitory.Title"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:text="@string/verif_kk"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/subtitle"
+            style="@style/Theme.Monitory.TextBase"
+            android:text="@string/verif_subtitle"
+            android:layout_marginTop="@dimen/margin_sm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fieldkk"
+            android:padding="@dimen/margin_lg"
+            android:background="@drawable/field_text"
+            android:textColor="@color/black3"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:inputType="textCapCharacters"
+            android:hint="@string/verif_kk"
+            android:maxLength="8"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_lg"
+            app:layout_constraintTop_toBottomOf="@id/subtitle"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/verifCode"
+            style="@style/Theme.Monitory.TextBase"
+            android:textSize="@dimen/size_sm"
+            android:text="@string/agreement"
+            android:layout_marginTop="@dimen/margin_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fieldkk"/>
+
+        <android.widget.Button
+            android:id="@+id/btnMasuk"
+            android:onClick="toForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_sm"
+            style="@style/Theme.Monitory.Button"
+            android:background="@drawable/btn_primary"
+            android:text="@string/verif_in"
+            app:layout_constraintTop_toBottomOf="@id/verifCode"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

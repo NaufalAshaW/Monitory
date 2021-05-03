@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?android:attr/actionBarSize"
+    android:paddingHorizontal="@dimen/margin_container"
+    android:background="@color/white3"
+    tools:context=".FormActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_nick"
+        android:text="@string/field_nama"
+        style="@style/Theme.Monitory.Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/margin_sm"
+        android:layout_marginTop="@dimen/margin_sm"
+        android:hint="@string/field_hint_nama"
+        android:inputType="text"
+        android:background="@drawable/field_text_line"
+        android:id="@+id/nickname"
+        app:layout_constraintTop_toBottomOf="@id/title_nick"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/field_umur"
+        style="@style/Theme.Monitory.Title"
+        android:layout_marginTop="@dimen/margin_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nickname"
+        android:id="@+id/title_umur"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/umur"
+        android:paddingVertical="@dimen/margin_sm"
+        android:layout_marginTop="@dimen/margin_sm"
+        android:inputType="number"
+        android:hint="@string/field_hint_umur"
+        android:background="@drawable/field_text_line"
+        app:layout_constraintTop_toBottomOf="@id/title_umur"/>
+
+    <android.widget.Button
+        android:id="@+id/btnNext"
+        android:onClick="toFinish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_xxl"
+        android:layout_marginVertical="@dimen/margin_xl"
+        android:background="@drawable/btn_primary"
+        android:text="@string/next"
+        style="@style/Theme.Monitory.Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
